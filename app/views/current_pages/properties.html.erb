@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>Properties-The Cheng Foundation</title>
+	</head>
+	<body class="small_top">
+		<h1 class="imp_text cent_text pg_head"><strong>Properties</strong></h1>
+		<h4 class="cent_text small_pad_bot">Here's a glimpse into a few of the Cheng Foundation's many properties.</h4>
+		<div id="theCarousel" class="carousel slide" data-interval="false">
+		  <!-- Define how many slides to put in the carousel, order list containing this, plus connects pack to carousel class-->
+		  <ol class="carousel-indicators">
+		    <li data-target="#theCarousel" data-slide-to="0" class="active"> </li >
+		    <li data-target="#theCarousel" data-slide-to="1"> </li>
+		    <li data-target="#theCarousel" data-slide-to="2"></li>
+		    <li data-target="#theCarousel" data-slide-to="3"></li>
+		    <li data-target="#theCarousel" data-slide-to="4"></li>
+		  </ol>
+		  <!-- Define the text to place over the image, ordered list w/ captions + buttons-->
+			<div class="carousel-inner">
+			    <div class="item active">
+				    <div class ="slide1">
+				    	<img class="slide_image" src="images/congress.JPG" alt="The Capitol Building">
+				    	<div class="carousel-caption collapse">
+				      		<h3 class="cent_text med_print">The Capitol Building</h3>
+				      		<p>The Cheng Family owns a number of government properties in and around Washington D.C. Most prominent is their recent purchase of the Capitol Building, the seat of the United States Congress. In addition to owning governmental landmarks such as the Capitol Building, the Cheng Foundation also exerts an unprecedented influence on US politics, with over 500 Congressmen being active members of the Foundation. </p>
+				    	</div>
+				  	</div>
+				</div>
+			  	<div class="item">
+				  	<div class="slide2">
+				  		<img class="slide_image" src="images/prop2.jpg" alt="Cheng Family Resorts">
+				  		<div class="carousel-caption">
+				      		<h3 class="cent_text med_print">Cheng Family Resorts</h3>
+				      		<p>A mystic resort located just outside Hong Kong that has been passed down for generations within the Cheng Dynasty. Following the death of Bryce and Darrell's uncle, Deng Xiaoping, the Foundation inherited ownership of the resort. Visitors must pay $5 million in order to enter the compound. Certain Cheng family clients such as Xi Jinping are offered a heavily discounted rate of $4,999,999.99.</p>
+				  		</div>
+			  		</div>
+				</div>
+				<div class="item">
+					<div class="slide3">
+						<img class="slide_image" src="images/palace_resized.png" alt="Temple of the Twin Dragons">
+						<div class="carousel-caption">
+				      		<h3 class="cent_text med_print">The Temple of the Twin Dragons</h3>
+				      		<p>
+				      			The Temple of the Twin Dragons is where Bryce and Darrell spend the majority of their time. Once a temple, the estates have now been renovated into a lavish palace employing 2000 servants and featuring 17 indoor Jacuzzis and 53 tennis courts with nets hand-crafted out of platinum. The palace is most famous for its system of gold-plated toilets which have been emulated by billionaires worldwide.   
+				      		</p>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="slide4">
+						<img class="slide_image" src="images/prop1_resized.jpg" alt="The Biltmore Estates">
+						<div class="carousel-caption">
+				      		<h3 class="cent_text med_print">The Biltmore Estate</h3>
+				      		<p>The recent purchase of the Biltmore Estate by the Cheng Foundation represents its commitment to preserving American historical treasures. After running the Vanderbilt family bankrupt through cut-throat capitalistic tactics, the Cheng family generously bought out their estate (in addition to their university) making it accessible to tourists for the first time in decades.</p>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="slide5">
+						<img class="slide_image" src="images/prop5.jpg" alt="Tower of the Twin Dragons">
+						<div class="carousel-caption">
+				      		<h3 class="cent_text med_print">The Tower of the Twin Dragons</h3>
+				      		<p>The Tower of the Twin Dragons is an architectural miracle created through Foundation efforts. Beautifully carved into the natural landscape of rural Oregon, it represents the Cheng Foundation's committment to both technological progress and the preservation of natural enviornments. It has since been made both a protected State and National Landmark. </p>
+						</div>
+					</div>
+				</div>
+			  <!-- Set the actions to take when the arrows are clicked -->
+				  <a class="left carousel-control" href="#theCarousel" data-slide="prev">
+				  	<span class="glyphicon glyphicon-chevron-left"> </span>
+				  </a>
+				  <a class="right carousel-control" href="#theCarousel" data-slide="next">
+				  	<span class="glyphicon glyphicon-chevron-right"></span>
+				  </a>
+			</div>
+		</div>
+		<div class="new-caption-area"></div>
+		<div class="has_height"></div>
+	</body>
+	<script>
+	$(document).ready(function(){
+	    $('.carousel').carousel();
+	    var caption = $('div.item:nth-child(1) .carousel-caption');
+	    $('.new-caption-area').html(caption.html());
+	    caption.css('display', 'none');
+
+	    $(".carousel").on('slide.bs.carousel', function (evt) {
+	        var caption = $('div.item:nth-child(' + ($(evt.relatedTarget).index() + 1) + ') .carousel-caption');
+	        $('.new-caption-area').html(caption.html());
+	        caption.css('display', 'none');
+	    });
+	});
+	</script>
+</html>

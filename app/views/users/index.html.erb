@@ -1,0 +1,20 @@
+<!-- This is basically a clear example for the contact us page -->
+<title>User Directory-The Cheng Foundation</title>
+<body class="small_top">
+	<h1 class="imp_text pg_head"><strong>User Directory</strong></h1>
+	<h4 class="cent_text">User Directory is arranged based on the time when a user first joined the Cheng Foundation.</h4>
+	<!-- Automatically accesses the @users object but requires particular style -->
+	<li class="cent_text"><%= will_paginate %></li>
+	<ul class="users">
+	  <% @users.each do |user| %>
+	    <li class="imp_text">
+	      <%= link_to user.name, user %>
+	      <!-- So that you can't delete youur own account + admin priv -->
+	      <% if current_user.admin? && !current_user?(user) %>
+	      	<%= link_to "delete", user, method: :delete, data: {confirm: "Are you sure you want to make this permanent change?"} %>
+	      <% end %>
+	    </li>
+	  <% end %>
+	</ul>
+	<li class="cent_text"><%= will_paginate %></li>
+</body>

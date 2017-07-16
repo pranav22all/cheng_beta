@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>Donations-The Cheng Foundation</title>
+	</head>
+	<body class="big_top">
+		<div class="container whitesmoke col-8 col-offset-2 pad_bot">
+			<h1 class="imp_text cent_text pg_head">  <strong>Donations</strong> </h1>
+			<p class="cent_text fine_print"> You must answer <strong>all</strong> of the questions below in order to be eligible for a Cheng Grant of $0.</p>
+			<p class="cent_text fine_print"> In order to be selected for the responses slideshow on the Accepted Donations page, you must take a screenshot of your entire donation application prior to clicking the submit button. Please send screenshots to <a>thechengfoundation@gmail.com.</a></p>			
+			<div class="container">
+				<div class="input-group sep_group">
+					  <span class="input-group-addon" id="basic-addon1">Full Name</span>
+					  <input type="text" class="form-control one_w" placeholder="" aria-describedby="First Name">
+				</div>
+				<div class="input-group low_group">
+					<span class="input-group-addon" id="basic-addon2">Favorite Cheng Family Member</span>
+					<input type="text" class="form-control one_w" placeholder="" aria-describedby="Favorite">
+					<span class="input-group-addon" id="basic-addon2">Cheng</span>
+				</div>
+				<div class="cent_text form-group low_group">
+					<textarea class="form-control one_w" placeholder="In 150 words or less, defend you answer to the previous question" rows="5" id="comment"></textarea>
+				</div>
+				<div class="input-group low_group">
+				  <span class="input-group-addon one_w">Email Address</span>
+				  <input type="text" class="form-control one_w" aria-label="Email">
+				  <span class="input-group-addon" id="basic-addon2">@chengfoundation.us</span>
+				</div>
+				<div class="input-group low_group">
+					<span class="input-group-addon">Date of Projected Death</span>
+					<input type="text" class="form-control one_w" aria-label="DOD">
+				</div>
+				<div class="input-group low_group">
+					<span class="input-group-addon">Horoscope</span>
+					<input type="text" class="form-control one_w" aria-label="Horoscope">
+				</div>
+				<div class="input-group low_group">
+					<span class="input-group-addon">Yearly Income (in $)</span>
+					<input type="text" class="form-control one_w" aria-label="Yearly income">
+				</div>
+				<div class="input-group low_group">
+					<span class="input-group-addon">Favorite Number</span>
+					<input type="text" class="form-control one_w" aria-label="Yearly income">
+				</div>
+				<div class="input-group low_group">
+					<span class="input-group-addon">Bank Account Router</span>
+					<input type="text" class="form-control one_w" aria-label="Yearly income">
+				</div>
+				<div class="cent_text form-group low_group">
+					<textarea class="form-control grant" placeholder="In 250 words or less, explain why you are worthy of receiving a Cheng Grant." rows="10" id="comment"></textarea>
+				</div>
+				<div class="cent_text form-group low_group">
+					<textarea class="form-control worship" placeholder="Which Cheng do you worship: Bryce or Darrell? Why?" rows="5" id="comment"></textarea>
+				</div>
+				<div class = "cent_text buf_top pad_bot">
+					<p><a class="btn btn-success btn-lg sub" role="button">Submit</a></p>
+					<div class="alert alert-success thanker" role="alert">Thanks for submitting an application, we will notify you of your application's status within 7 business days!</div>
+				</div>
+			</div>
+		</div>	
+	</body>
+	<script>
+	$(document).ready(function(){
+		function change_credits_init(){
+			$(".thanker").fadeToggle(0); 
+		}
+		function change_thank(){
+			$(".thanker").fadeIn(200);
+			$(".worship").val("");
+			$(".grant").val("");
+			$(".one_w").val("");
+		} 
+		change_credits_init() 
+		$('.sub').on("click",change_thank) 
+	});
+	</script>
+
+</html>

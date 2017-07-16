@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>User Page-The Cheng Foundation</title>
+	</head>
+	<body class="small_top">
+		<h1 class="cent_text imp_text pg_head"><strong>Welcome, <%= @user.name %></strong></h1>
+		<div class="row">
+	      	<p class="cent_text">
+				Official Account Email: <%= @user.email %>
+			</p>
+		</div>
+		<h1 class="cent_text pg_head">Cheng Foundation Official News</h1>
+		<h4 class="cent_text small_pad_bot">Available for a limited time only, catch the latest in Cheng Foundation news straight on your profile page!</h4>
+		<div id="theCarousel" class="carousel slide" data-interval="false">
+		  <!-- Define how many slides to put in the carousel, order list containing this, plus connects pack to carousel class-->
+		  <ol class="carousel-indicators">
+		    <li data-target="#theCarousel" data-slide-to="0" class="active"> </li >
+		    <li data-target="#theCarousel" data-slide-to="1"> </li>
+		    <li data-target="#theCarousel" data-slide-to="2"></li>
+		  </ol>
+		  <!-- Define the text to place over the image, ordered list w/ captions + buttons-->
+			<div class="carousel-inner">
+			    <div class="item active">
+				    <div class ="slide1">
+				    	<img class="slide_image" src="/images/alibaba_resized.jpg" alt="The Capitol Building">
+				    	<div class="carousel-caption collapse">
+				      		<h3 class="cent_text med_print">Business Acquisitions</h3>
+				      		<p>The Cheng Founding recently acquired popular Chinese e-commerce company, Alibaba Group Holding Limited. The landmark deal was negotiated by Cheng Foundation President Darrell Cheng himself. Early rounds of negotiations began in March 2017 with the final round taking place shortly after the Dragon Boat Festival during the month of June. Jack Ma, nine year Cheng Foundation  member and entreprenuer, described the Cheng Foundation as the greatest organization he had ever worked with. Additionally, he reportedly donated over three billion dollars to the Cheng Dynastic Trust Fund.</p>
+				    	</div>
+				  	</div>
+				</div>
+			  	<div class="item">
+				  	<div class="slide2">
+				  		<img class="slide_image" src="/images/amazon_resized.jpg" alt="Cheng Family Resorts">
+				  		<div class="carousel-caption">
+				      		<h3 class="cent_text med_print">Property Expansions</h3>
+				      		<p>The Cheng Foundation purchased over ten million acres of the Amazon rainforest in a recent deal with the Brazilian government. Bryce Cheng, Cheng Foundation President, stated the organization would aim to deforest the entire region (currently called the Cheng Zone) by 2020. Resources escavated from the Cheng Zone will be used to build a series of a hundred Cheng Dynasty mansions located in the Gobi Desert as living accomodations for the extended members of the Cheng Family.</p>
+				  		</div>
+			  		</div>
+				</div>
+				<div class="item">
+					<div class="slide3">
+						<img class="slide_image" src="/images/charity_resized.jpg" alt="Temple of the Twin Dragons">
+						<div class="carousel-caption">
+				      		<h3 class="cent_text med_print">Charity Work</h3>
+				      		<p>
+				      			The Cheng Foundation donated over four billion dollars to impoverished Chinese citizen Lason Jhaw. After serving as Darrell's personal butler for over 15 years, he was deemed worthy by the Board of the Cheng Foundation to receieve a Cheng Foundation Service Grant. The 4 billion dollar lump sum was paid completely in Chinese Yuans and exempted from taxes due to the Foundation's non-profit status and Communist Party connections. As of press release, Lason Jhaw stated he planned to continue serving as the family's personal butler for the foreseeable future.      
+				      		</p>
+						</div>
+					</div>
+				</div>
+			  <!-- Set the actions to take when the arrows are clicked -->
+				  <a class="left carousel-control" href="#theCarousel" data-slide="prev">
+				  	<span class="glyphicon glyphicon-chevron-left"> </span>
+				  </a>
+				  <a class="right carousel-control" href="#theCarousel" data-slide="next">
+				  	<span class="glyphicon glyphicon-chevron-right"></span>
+				  </a>
+			</div>
+		</div>
+		<div class="new-caption-area"></div>
+		<div class="has_height"></div>	
+	</body>
+	<script>
+	$(document).ready(function(){
+	    $('.carousel').carousel();
+	    var caption = $('div.item:nth-child(1) .carousel-caption');
+	    $('.new-caption-area').html(caption.html());
+	    caption.css('display', 'none');
+
+	    $(".carousel").on('slide.bs.carousel', function (evt) {
+	        var caption = $('div.item:nth-child(' + ($(evt.relatedTarget).index() + 1) + ') .carousel-caption');
+	        $('.new-caption-area').html(caption.html());
+	        caption.css('display', 'none');
+	    });
+	});
+	</script>
+</html>

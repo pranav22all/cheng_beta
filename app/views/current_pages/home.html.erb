@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cheng Foundation Official Website</title>
+		<meta name="google-site-verification" content="MHZuXCUmVLMbnEuXnE2MK9ElNqZ1QDSfzJ5HV-WBKn8"/>
+	</head>
+	<body class="big_top">
+		<div id="theCarousel" class="carousel slide" data-interval="false">
+		  <!-- Define how many slides to put in the carousel, order list containing this, plus connects pack to carousel class-->
+		  <ol class="carousel-indicators">
+		    <li data-target="#theCarousel" data-slide-to="0" class="active"> </li >
+		    <li data-target="#theCarousel" data-slide-to="1"> </li>
+		    <li data-target="#theCarousel" data-slide-to="2"></li>
+		  </ol>
+		  <!-- Define the text to place over the image, ordered list w/ captions + buttons-->
+			<div class="carousel-inner">
+			    <div class="item active">
+				    <div class ="slide1">
+						<img class="slide_image" src="images/Island_resized.jpg" alt="Island">
+						<div class="carousel-caption">
+							<p class="fine_print read_col">The Cheng Island Properties</p>
+							<p><a href="/properties" class="btn btn-primary btn-sm">Learn more about our various properties</a></p>
+						</div>
+				  	</div>
+				</div>
+			  	<div class="item">
+				  	<div class="slide2">
+				    	<img class="slide_image" src="images/palm_island.jpg" alt="Building">
+				    	<div class="carousel-caption">
+				      		<p class="fine_print read_col">The Cheng Construction Fund</p>
+				      		<p><a href="/aboutus" class="btn btn-primary btn-sm">Learn more about our vision</a></p>
+				    	</div>
+			  		</div>
+				</div>
+				<div class="item">
+					<div class="slide3">
+				  		<img class="slide_image" src="images/Cheng_Ski_Hori.PNG" alt="Mountain">
+				  		<div class="carousel-caption">
+				    		<p class="fine_print read_col">The Cheng Foundation Mountainous Development Program</p>
+				    		<p><a href="/ourwork" class="btn btn-primary btn-sm">Learn more about our programs</a></p>
+				  		</div>
+					</div>
+			</div>
+			  <!-- Set the actions to take when the arrows are clicked -->
+				  <a class="left carousel-control" href="#theCarousel" data-slide="prev">
+				  	<span class="glyphicon glyphicon-chevron-left"> </span>
+				  </a>
+				  <a class="right carousel-control" href="#theCarousel" data-slide="next">
+				  	<span class="glyphicon glyphicon-chevron-right"></span>
+				  </a>
+			</div>
+		</div>
+		<div class="container">
+			<div class="jumbotron gold_jumbotron">
+			 	<div class = "cent_text">
+			  		<%= link_to "Create a Member Account Now!", signup_path, class: "btn btn-lg btn-info button_font" %>
+			  	</div>
+			  	<h1 class="imp_text pg_head">The Cheng Mission</h1>
+			  	<p class="cent_text">The Cheng Foundation's lifelong mission is to use the Cheng Family's resources 
+			  	to help support the less fortunate members of our local communities.
+			  	</p>
+			</div>
+		</div> 
+	</body>
+</html>
